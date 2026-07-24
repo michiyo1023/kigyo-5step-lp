@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>起業５ステップ講座｜すでに動いているのに、結果につながらないあなたへ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+  :root{
+    --ink:#1f2430;
+    --ink-soft:#3d4356;
+    --cream:#f8f4ec;
+    --cream-deep:#efe7d8;
+    --gold:#b6883f;
+    --gold-deep:#8f6a2e;
+    --line:#ddd3bd;
+    --white:#fffdf9;
+    --red:#a8433a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+  .serif{font-family:"Shippori Mincho",serif;}
+  .placeholder{
+    display:inline-block;
+    background:#fff3e0;
+    border:1px dashed #d8a24a;
+    color:#8a5a1c;
+    padding:2px 10px;
+    border-radius:4px;
+    font-size:.88em;
+    font-weight:700;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(180deg,var(--ink) 0%,#2a3142 100%);
+    color:var(--cream);
+    padding:64px 0 72px;
+    text-align:center;
+    position:relative;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:-1px;height:60px;
+    background:var(--cream);
+    clip-path:polygon(0 100%,100% 100%,100% 0);
+  }
+  .hero .kicker{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    padding:6px 18px;
+    border-radius:999px;
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-family:"Shippori Mincho",serif;
+    font-weight:800;
+    font-size:clamp(28px,5.4vw,44px);
+    line-height:1.6;
+    margin-bottom:20px;
+  }
+  .hero h1 .accent{color:var(--gold);}
+  .hero p.lead{
+    font-size:16px;
+    color:#d8dae2;
+    max-width:520px;
+    margin:0 auto 36px;
+  }
+  .hero .price-badge{
+    display:inline-flex;
+    gap:14px;
+    align-items:baseline;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.2);
+    padding:14px 28px;
+    border-radius:12px;
+    margin-bottom:8px;
+  }
+  .hero .price-badge .old{
+    text-decoration:line-through;
+    color:#9aa0b0;
+    font-size:15px;
+  }
+  .hero .price-badge .new{
+    font-family:"Shippori Mincho",serif;
+    font-size:30px;
+    color:var(--gold);
+    font-weight:800;
+  }
+
+  section{padding:72px 0;}
+  h2.section-title{
+    font-family:"Shippori Mincho",serif;
+    font-weight:800;
+    font-size:clamp(22px,4vw,30px);
+    text-align:center;
+    line-height:1.6;
+    margin-bottom:16px;
+  }
+  .section-sub{
+    text-align:center;
+    color:var(--ink-soft);
+    margin-bottom:48px;
+    font-size:15px;
+  }
+
+  /* ---------- あるある共感 ---------- */
+  .voices{background:var(--white);}
+  .voice-list{display:flex;flex-direction:column;gap:14px;max-width:620px;margin:0 auto;}
+  .voice-item{
+    background:var(--cream);
+    border-left:4px solid var(--gold);
+    padding:18px 22px;
+    border-radius:4px;
+    font-size:15.5px;
+    color:var(--ink-soft);
+  }
+  .voice-item b{color:var(--ink);}
+
+  /* ---------- 種明かし ---------- */
+  .reveal{background:var(--ink);color:var(--cream);}
+  .reveal .wrap{text-align:center;}
+  .reveal h2.section-title{color:var(--white);}
+  .reveal .big-line{
+    font-family:"Shippori Mincho",serif;
+    font-size:clamp(20px,3.6vw,26px);
+    font-weight:700;
+    line-height:1.9;
+    margin:32px 0;
+    color:var(--gold);
+  }
+  .reveal p{color:#cfd2dc;max-width:600px;margin:0 auto 16px;font-size:15.5px;}
+
+  /* ---------- 5 STEP ---------- */
+  .steps{background:var(--cream);}
+  .step-card{
+    display:grid;
+    grid-template-columns:88px 1fr;
+    gap:24px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px 26px;
+    margin-bottom:20px;
+    align-items:start;
+  }
+  .step-num{
+    font-family:"Shippori Mincho",serif;
+    font-size:15px;
+    color:var(--gold-deep);
+    text-align:center;
+  }
+  .step-num .n{
+    display:block;
+    font-size:34px;
+    font-weight:800;
+    color:var(--gold);
+    line-height:1;
+  }
+  .step-card h3{
+    font-family:"Shippori Mincho",serif;
+    font-size:19px;
+    margin-bottom:4px;
+  }
+  .step-card .step-tag{
+    display:inline-block;
+    font-size:12.5px;
+    color:var(--gold-deep);
+    background:var(--cream-deep);
+    padding:2px 10px;
+    border-radius:999px;
+    margin-bottom:10px;
+  }
+  .step-card p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px;}
+  .step-card ul{padding-left:1.1em;color:var(--ink-soft);font-size:14px;}
+  .step-card li{margin-bottom:4px;}
+
+  /* ---------- 講師 ---------- */
+  .instructor{background:var(--white);}
+  .instructor-box{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:32px;
+    align-items:center;
+    background:var(--cream);
+    border-radius:16px;
+    padding:32px;
+  }
+  .instructor-photo{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:12px;
+    background:var(--cream-deep) center/cover;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-deep);
+    font-size:13px;
+    text-align:center;
+    border:1px dashed var(--gold);
+  }
+  .instructor-box h3{font-family:"Shippori Mincho",serif;font-size:20px;margin-bottom:4px;}
+  .instructor-box .role{color:var(--gold-deep);font-size:13.5px;margin-bottom:14px;}
+  .instructor-box p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px;}
+
+  /* ---------- 未来像 ---------- */
+  .future{background:var(--cream-deep);}
+  .future-box{
+    background:var(--white);
+    border-radius:16px;
+    padding:36px 32px;
+    max-width:680px;
+    margin:0 auto;
+    border-top:4px solid var(--gold);
+  }
+  .future-box .tag{font-size:13px;color:var(--gold-deep);letter-spacing:.1em;margin-bottom:14px;display:block;}
+  .future-box p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .future-box p:last-child{margin-bottom:0;}
+
+  /* ---------- 誰のため／誰のためでないか ---------- */
+  .fit{background:var(--white);}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .fit-col{border-radius:14px;padding:26px;}
+  .fit-col.yes{background:#f4f1e6;border:1px solid var(--gold);}
+  .fit-col.no{background:#f3ecec;border:1px solid #d4a9a4;}
+  .fit-col h4{font-family:"Shippori Mincho",serif;font-size:16.5px;margin-bottom:14px;}
+  .fit-col.yes h4{color:var(--gold-deep);}
+  .fit-col.no h4{color:var(--red);}
+  .fit-col ul{list-style:none;font-size:14px;color:var(--ink-soft);}
+  .fit-col li{margin-bottom:10px;padding-left:1.4em;position:relative;}
+  .fit-col.yes li::before{content:"○";position:absolute;left:0;color:var(--gold-deep);}
+  .fit-col.no li::before{content:"×";position:absolute;left:0;color:var(--red);}
+
+  /* ---------- カリキュラム表（データ重視） ---------- */
+  .table-wrap{overflow-x:auto;}
+  table.curriculum{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--white);
+    font-size:13.5px;
+    min-width:640px;
+  }
+  table.curriculum th,table.curriculum td{
+    border:1px solid var(--line);
+    padding:12px 14px;
+    text-align:left;
+    vertical-align:top;
+  }
+  table.curriculum th{
+    background:var(--ink);
+    color:var(--cream);
+    font-weight:500;
+    font-size:13px;
+  }
+  table.curriculum tr:nth-child(even) td{background:var(--cream);}
+
+  /* ---------- オファー ---------- */
+  .offer{background:var(--ink);color:var(--cream);text-align:center;}
+  .offer h2.section-title{color:var(--white);}
+  .offer-card{
+    background:var(--white);
+    color:var(--ink);
+    border-radius:18px;
+    padding:40px 32px;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .offer-card .name{font-family:"Shippori Mincho",serif;font-size:20px;margin-bottom:18px;}
+  .offer-card .price-row{
+    display:flex;justify-content:center;align-items:baseline;gap:16px;
+    margin-bottom:6px;
+  }
+  .offer-card .old-price{color:#a3a3a3;text-decoration:line-through;font-size:16px;}
+  .offer-card .new-price{
+    font-family:"Shippori Mincho",serif;
+    font-size:40px;font-weight:800;color:var(--gold-deep);
+  }
+  .offer-card .new-price small{font-size:15px;font-weight:500;}
+  .offer-card .monitor-note{font-size:12.5px;color:#9a7a3a;margin-bottom:24px;}
+  .offer-card ul.includes{
+    text-align:left;
+    list-style:none;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:18px 4px;
+    margin-bottom:24px;
+  }
+  .offer-card ul.includes li{
+    font-size:14px;color:var(--ink-soft);margin-bottom:8px;padding-left:1.6em;position:relative;
+  }
+  .offer-card ul.includes li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:700;}
+  .cta-btn{
+    display:block;
+    background:var(--gold);
+    color:var(--white);
+    font-weight:700;
+    font-size:16px;
+    padding:18px;
+    border-radius:10px;
+    text-decoration:none;
+    letter-spacing:.05em;
+    transition:opacity .2s;
+  }
+  .cta-btn:hover{opacity:.88;}
+  .offer-meta{font-size:12.5px;color:#8b93a6;margin-top:16px;}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream);}
+  .faq-item{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 24px;
+    margin-bottom:14px;
+  }
+  .faq-item .q{font-weight:700;color:var(--gold-deep);margin-bottom:8px;font-size:15px;}
+  .faq-item .a{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- フッターCTA ---------- */
+  .final{background:linear-gradient(180deg,#2a3142 0%,var(--ink) 100%);color:var(--cream);text-align:center;}
+  .final h2{
+    font-family:"Shippori Mincho",serif;
+    font-size:clamp(22px,4.4vw,30px);
+    margin-bottom:20px;
+    line-height:1.7;
+  }
+  .final p.lead{color:#cfd2dc;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;font-size:15px;}
+  .final .cta-btn{max-width:360px;margin:0 auto;}
+
+  footer{background:var(--ink);color:#8b93a6;text-align:center;padding:28px 0;font-size:12.5px;}
+
+  @media(max-width:640px){
+    .instructor-box{grid-template-columns:1fr;text-align:center;}
+    .instructor-photo{max-width:160px;margin:0 auto;}
+    .fit-grid{grid-template-columns:1fr;}
+    .step-card{grid-template-columns:56px 1fr;padding:22px 18px;}
+    .step-num .n{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">オンライン開催・全5回｜起業５ステップ講座</span>
+    <h1>こんなに学んだのに、<br>なぜ結果が出ないんだろう。<br><span class="accent">足りなかったのは、順番でした。</span></h1>
+    <p class="lead">才能でも、努力の量でもありません。<br>起業には、正しい「組み立て方」があります。<br>それを知らないまま走り続けてきた、あなたへ。</p>
+    <div class="price-badge">
+      <span class="old">通常 66,000円</span>
+      <span class="new">モニター 33,000円</span>
+    </div>
+    <div style="font-size:12.5px;color:#9aa0b0;">※税込・60分個別セッション付き</div>
+  </div>
+</section>
+
+<!-- ============ あるある共感（序） ============ -->
+<section class="voices">
+  <div class="wrap">
+    <h2 class="section-title">それ、口には出せなかっただけで<br>ずっと感じていたことじゃないですか。</h2>
+    <div class="voice-list">
+      <div class="voice-item">資格も取った。講座も受けた。<b>なのに、なぜか集客につながらない。</b></div>
+      <div class="voice-item">発信は続けている。<b>でも申し込みが来ない。</b>何が違うのか分からない。</div>
+      <div class="voice-item">「頑張らなきゃ」と思うほど、<b>なぜか疲れていく自分がいる。</b></div>
+      <div class="voice-item">誰かに依存するのではなく、<b>本当は自分の力で収入を作りたい。</b></div>
+      <div class="voice-item">このままではダメだと分かっている。<b>そろそろ、本気で変わりたい。</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 種明かし（破） ============ -->
+<section class="reveal">
+  <div class="wrap">
+    <h2 class="section-title">頑張りが足りないのではありません。<br>順番が、崩れているだけです。</h2>
+    <p>軸が決まる前にSNSを始め、ターゲットが定まる前に商品を作り、コンセプトが曖昧なまま発信を重ねる。</p>
+    <p>それぞれは間違っていません。ただ、並べる順番が違うと、積み上げたものが積み上がらないのです。</p>
+    <div class="big-line">起業には、崩れない「組み立て方」がある。</div>
+    <p>脳科学の視点から人の行動と思考の仕組みを扱う脳大成理論<sup>®</sup>をベースに、迷わず進める5つの順番に設計し直したのが、この講座です。</p>
+  </div>
+</section>
+
+<!-- ============ 5 STEP ============ -->
+<section class="steps">
+  <div class="wrap">
+    <h2 class="section-title">起業５ステップの中身</h2>
+    <p class="section-sub">オンラインZoom開催・全5回。ワークシート一式（Excel＋PDF）付き。</p>
+
+    <div class="step-card">
+      <div class="step-num">STEP<span class="n">1</span></div>
+      <div>
+        <span class="step-tag">起業の軸を作る</span>
+        <h3>スタート設計</h3>
+        <p>起業には必ず苦しい時期が来ます。その時に諦めない「軸」を、最初に作ります。</p>
+        <ul>
+          <li>なぜ起業したいのか、本当の理由を掘り下げる</li>
+          <li>理想のライフスタイルを言語化する</li>
+          <li>現実的かつワクワクできる収入目標を決める</li>
+          <li>「私は◯◯のために起業し、◯◯を大切にする」という自分軸をまとめる</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">STEP<span class="n">2</span></div>
+      <div>
+        <span class="step-tag">ビジネスの基本理解</span>
+        <h3>マーケティング＆マインド</h3>
+        <p>「積み上げた信頼以上に繁栄することはない」——ビジネスの土台となる考え方を身につけます。</p>
+        <ul>
+          <li>認知→興味→信頼→申込みの流れを理解する</li>
+          <li>お客様が申込みに至るまでの道筋を設計する</li>
+          <li>行動を止めてしまう「マインドの壁」を5つの視点で外す</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">STEP<span class="n">3</span></div>
+      <div>
+        <span class="step-tag">誰を助けるか決める</span>
+        <h3>ターゲット＆コンセプト設定</h3>
+        <p>「やりたいこと」「出来ること」「求められること」の3つを重ねて、ブレないコンセプトを作ります。</p>
+        <ul>
+          <li>自分の強みと想いを明確にする</li>
+          <li>ターゲットの悩みとニーズを深掘りする</li>
+          <li>「私は◯◯な人に◯◯を提供し、◯◯にします」というコンセプト文を完成させる</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">STEP<span class="n">4</span></div>
+      <div>
+        <span class="step-tag">サービスを作る</span>
+        <h3>商品設計</h3>
+        <p>商品とは「変化」そのもの。価格は自分の価値ではなく、お客様の変化の大きさで決めます。</p>
+        <ul>
+          <li>売れる商品と売れない商品の違いを理解する</li>
+          <li>単発で受けやすいフロントエンドサービスを設計する</li>
+          <li>その先につながる継続サービスの構想を立てる</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">STEP<span class="n">5</span></div>
+      <div>
+        <span class="step-tag">お客様に届ける</span>
+        <h3>集客設計</h3>
+        <p>集客は「難しい仕組み作り」ではなく、お客様が進む道を用意すること。自分に合うやり方を見つけます。</p>
+        <ul>
+          <li>4つの集客パターンから、自分に合うものを診断する</li>
+          <li>「集客できる投稿」「ファンが増える投稿」の違いを書き分ける</li>
+          <li>1か月以内に動き出すための具体的なアクションを決める</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 講師 ============ -->
+<section class="instructor">
+  <div class="wrap">
+    <h2 class="section-title">ナビゲーターについて</h2>
+    <div class="instructor-box">
+      <div class="instructor-photo">プロフィール<br>写真</div>
+      <div>
+        <h3>美智代</h3>
+        <div class="role">マインドチューニングマスター／脳大成理論<sup>®</sup>認定インストラクター</div>
+        <p>元教員。教育現場に20年以上携わり、個別指導・塾経営を経験。これまでに1万人以上の生徒・受講者と向き合ってきました。</p>
+        <p>脳科学をベースにした脳大成理論<sup>®</sup>とNLPを実践に活かしながら、「頑張っているのに結果が出ない」人の詰まりを、構造としてほどいていくことを専門にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 未来像（急） ============ -->
+<section class="future">
+  <div class="wrap">
+    <h2 class="section-title">5回を終えたとき、机の上には</h2>
+    <div class="future-box">
+      <span class="tag serif">— 講座修了後にできあがっているもの —</span>
+      <p>ブレない起業の軸。誰に何を届けるかが一言で言えるコンセプト。お客様の変化を軸にした商品。そして、自分に合った集客の型。</p>
+      <p>バラバラだった知識やノウハウが、ひとつの順番に並び直され、「次に何をすればいいか」が自分の言葉で言える状態になっています。</p>
+      <p>それは、誰かに教わり続けなくても、自分の力で前に進めるということです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 誰のため／誰のためでないか ============ -->
+<section class="fit">
+  <div class="wrap">
+    <h2 class="section-title">この講座について、正直にお伝えします</h2>
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h4>こんな方へ</h4>
+        <ul>
+          <li>すでに学び、動いているのに結果につながっていない方</li>
+          <li>自分に投資する覚悟があり、自立して進みたい方</li>
+          <li>自分の力で収入を作れるようになりたい方</li>
+          <li>本気で今の状況を変える気がある方</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h4>こんな方にはおすすめしません</h4>
+        <ul>
+          <li>誰かにやってもらうことを前提にしている方</li>
+          <li>行動せず、情報収集だけで終わらせたい方</li>
+          <li>今すぐ楽に結果が出る方法を探している方</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ カリキュラム表（腕組みさん向け） ============ -->
+<section class="voices">
+  <div class="wrap">
+    <h2 class="section-title">カリキュラム一覧</h2>
+    <div class="table-wrap">
+      <table class="curriculum">
+        <thead>
+          <tr><th>回</th><th>テーマ</th><th>ゴール</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Step1</td><td>スタート設計</td><td>起業の軸を言語化する</td></tr>
+          <tr><td>Step2</td><td>マーケティング＆マインド</td><td>信頼構築の仕組みと行動を止める壁を理解する</td></tr>
+          <tr><td>Step3</td><td>ターゲット＆コンセプト設定</td><td>誰に何を届けるか、コンセプト文を完成させる</td></tr>
+          <tr><td>Step4</td><td>商品設計</td><td>フロント／継続サービスの設計図を作る</td></tr>
+          <tr><td>Step5</td><td>集客設計</td><td>自分に合う集客パターンと発信ネタを決める</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--ink-soft);margin-top:18px;">
+      開催形式：オンライン（Zoom）ライブ　／　日程：<span class="placeholder">◯月◯日（◯）決定次第ご案内</span>　／　定員：<span class="placeholder">確認中</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ オファー（急＋） ============ -->
+<section class="offer">
+  <div class="wrap">
+    <h2 class="section-title">お申込みについて</h2>
+    <div class="offer-card">
+      <div class="name">起業５ステップ講座</div>
+      <div class="price-row">
+        <span class="old-price">通常 66,000円</span>
+        <span class="new-price">33,000<small>円（税込）</small></span>
+      </div>
+      <div class="monitor-note">モニター価格でのご案内です</div>
+      <ul class="includes">
+        <li>オンライン（Zoom）ライブ講座　全5回</li>
+        <li>ワークシート一式（Excel＋PDF 4種）</li>
+        <li>60分個別セッション付き</li>
+      </ul>
+      <a href="#" class="cta-btn">起業５ステップ講座に申し込む</a>
+      <div class="offer-meta">※お申込みフォームのURLは別途ご用意ください</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <h2 class="section-title">よくあるご質問</h2>
+
+    <div class="faq-item">
+      <div class="q">Q. すでにある程度学んできましたが、初心者向けの内容ではないですか？</div>
+      <div class="a">A. この講座は、ゼロから起業を教えるものではありません。すでに学び、動いてきた方が「順番」を整え直し、結果につながる形に組み直すための講座です。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q. Zoomでのライブ講座に、毎回参加できるか不安です。</div>
+      <div class="a">A. <span class="placeholder">見逃し配信・録画対応の有無は現在確認中です。決まり次第こちらに追記してください。</span></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q. どんな業種でも活用できますか？</div>
+      <div class="a">A. はい。エステ、カウンセラー、コーチ、講師業など、業種を問わず使える「順番の型」をお伝えします。実際のワークでは複数の業種の具体例を交えて進めます。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q. 60分の個別セッションはいつ受けられますか？</div>
+      <div class="a">A. <span class="placeholder">実施タイミング（講座中／講座後など）を決めて追記してください。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 最終CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2>頑張る方向を、変えるだけでいい。</h2>
+    <p class="lead">努力の量は、もう十分です。<br>足りなかったのは、順番だけでした。<br>その順番を、5回で一緒に組み立て直しませんか。</p>
+    <a href="#" class="cta-btn">モニター価格で申し込む</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 起業５ステップ講座 by 美智代（マインドチューニングマスター）</div>
+</footer>
+
+</body>
+</html>
