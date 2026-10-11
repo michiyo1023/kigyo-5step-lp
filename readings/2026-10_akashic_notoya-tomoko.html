@@ -1,0 +1,248 @@
+<title>能登屋知子さま アカシック鑑定書</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500&family=Cormorant+Garamond:ital,wght@1,500&display=swap">
+<style>
+/* Layout: one A4-like sheet of indigo-washed paper, framed by a double gold rule; sections read top to bottom like a bound certificate. Single light theme by choice (a printed document). */
+:root {
+  --desk: #DCE1EA;        /* surface around the sheet */
+  --paper: #FAFBFD;       /* the sheet */
+  --wash: #EEF1F7;        /* tinted panels */
+  --ink: #1E2744;         /* deep indigo ink */
+  --ink-soft: #4A5372;    /* secondary text */
+  --gold: #9C7F45;        /* muted gold leaf */
+  --gold-faint: #CDBB92;
+  --f-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-body: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-label: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --f-latin: "Cormorant Garamond", "Times New Roman", serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 2;
+  padding-inline: 16px;
+  padding-block: 40px;
+}
+.sheet {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: clamp(20px, 5vw, 56px);
+  box-shadow: 0 2px 24px rgba(30, 39, 68, .12);
+}
+.frame {
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--gold-faint);
+  outline-offset: 5px;
+  padding: clamp(24px, 6vw, 64px) clamp(18px, 6vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* header */
+header { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.latin { font-family: var(--f-latin); font-style: italic; color: var(--gold); font-size: 1.05rem; letter-spacing: .12em; }
+h1 {
+  font-family: var(--f-display); font-weight: 800;
+  font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: .28em; line-height: 1.4;
+  margin: 0; padding-left: .28em; text-wrap: balance;
+}
+.orn { display: flex; align-items: center; gap: 12px; width: min(280px, 80%); color: var(--gold); }
+.orn::before, .orn::after { content: ""; flex: 1; height: 1px; background: var(--gold-faint); }
+.orn svg { width: 14px; height: 14px; fill: var(--gold); flex: none; }
+.recipient { font-size: 1.15rem; letter-spacing: .1em; margin: 0; }
+.recipient strong { font-size: 1.55rem; font-weight: 600; letter-spacing: .16em; }
+
+/* section heads */
+.label {
+  font-family: var(--f-label); font-weight: 500; font-size: .78rem;
+  letter-spacing: .3em; color: var(--gold); margin: 0 0 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.label::after { content: ""; flex: 1; height: 1px; background: var(--gold-faint); }
+
+/* profile */
+dl.profile { margin: 0; display: grid; grid-template-columns: max-content 1fr; border-top: 1px solid var(--gold-faint); }
+dl.profile dt, dl.profile dd { padding: 10px 4px; border-bottom: 1px solid var(--gold-faint); margin: 0; line-height: 1.6; }
+dl.profile dt { font-family: var(--f-label); font-size: .85rem; color: var(--ink-soft); letter-spacing: .12em; padding-right: 28px; }
+dl.profile dd { font-variant-numeric: tabular-nums; min-width: 0; }
+.ruby { font-size: .8rem; color: var(--ink-soft); margin-left: .6em; }
+
+/* question */
+.question { background: var(--wash); padding: 24px clamp(18px, 4vw, 32px); margin: 0; }
+.question p { margin: 0; }
+
+/* reading */
+.reading { display: flex; flex-direction: column; gap: 44px; }
+.intro { text-align: center; color: var(--ink-soft); margin: 0; }
+.chapter h3 {
+  font-family: var(--f-display); font-weight: 600; font-size: 1.3rem;
+  letter-spacing: .1em; line-height: 1.6; margin: 0 0 14px; text-wrap: balance;
+  display: flex; gap: 14px; align-items: baseline;
+}
+.chapter h3 .no { font-family: var(--f-latin); font-style: italic; font-weight: 500; color: var(--gold); font-size: 1.15rem; }
+.chapter p { margin: 0 0 1.1em; max-width: 36em; }
+.chapter p:last-child { margin-bottom: 0; }
+.key {
+  font-weight: 600; background: linear-gradient(transparent 62%, rgba(205, 187, 146, .45) 62%);
+}
+
+/* summary */
+.summary { border: 1px solid var(--gold-faint); padding: 28px clamp(18px, 4vw, 34px); }
+.summary .label { margin-bottom: 12px; }
+.summary ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.summary li { position: relative; padding-left: 1.6em; line-height: 1.85; }
+.summary li::before { content: "✦"; position: absolute; left: 0; top: .05em; color: var(--gold); font-size: .8rem; }
+
+/* footer */
+footer { display: flex; flex-direction: column; gap: 28px; }
+.note { font-family: var(--f-label); font-size: .8rem; line-height: 1.9; color: var(--ink-soft); margin: 0; }
+.sign { display: flex; justify-content: flex-end; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+.sign-text { text-align: right; line-height: 1.7; }
+.sign-text .date { font-family: var(--f-label); font-size: .82rem; color: var(--ink-soft); letter-spacing: .1em; display: block; }
+.sign-text .role { font-family: var(--f-label); font-size: .82rem; letter-spacing: .14em; display: block; }
+.sign-text .name { font-size: 1.5rem; font-weight: 600; letter-spacing: .3em; }
+.seal {
+  width: 64px; height: 64px; border: 1.5px solid var(--gold); border-radius: 50%;
+  display: grid; place-items: center; color: var(--gold);
+  font-family: var(--f-display); font-weight: 800; font-size: .8rem; letter-spacing: .1em; line-height: 1.3; text-align: center;
+  flex: none;
+}
+
+@media (max-width: 480px) {
+  dl.profile { grid-template-columns: 1fr; }
+  dl.profile dt { border-bottom: none; padding-bottom: 0; }
+  h1 { letter-spacing: .18em; padding-left: .18em; }
+}
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body { background: #fff; padding: 0; }
+  .sheet { box-shadow: none; max-width: none; padding: 0; }
+  .chapter, .summary, .question { break-inside: avoid; }
+}
+</style>
+
+<main class="sheet">
+  <div class="frame">
+
+    <header>
+      <span class="latin">Akashic Record Reading</span>
+      <h1>アカシック鑑定書</h1>
+      <div class="orn" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 0 6.2 3.8 10 5 6.2 6.2 5 10 3.8 6.2 0 5 3.8 3.8Z"/></svg></div>
+      <p class="recipient"><strong>能登屋 知子</strong> さま</p>
+    </header>
+
+    <section>
+      <h2 class="label">ご依頼者さま</h2>
+      <dl class="profile">
+        <dt>お名前</dt><dd>能登屋 知子<span class="ruby">のとや ともこ</span></dd>
+        <dt>生年月日</dt><dd>1974年11月7日</dd>
+        <dt>出生地</dt><dd>秋田県秋田市</dd>
+        <dt>現在地</dt><dd>秋田県秋田市</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2 class="label">ご相談内容</h2>
+      <blockquote class="question">
+        <p>旅行を楽しむように働いている未来を感じます。<br>
+        でもそうなると、家のことが気になります。<br>
+        兄弟もいますが、私はこのまま今の家に住み続けているのでしょうか？<br>
+        リフォームや建て直しをしているのでしょうか？</p>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2 class="label">リーディングメッセージ</h2>
+      <div class="reading">
+        <p class="intro">知子さんのアカシックレコードにつながり、<br>メッセージを受け取りました。</p>
+
+        <article class="chapter">
+          <h3><span class="no">i.</span>自分の足で歩く旅</h3>
+          <p>知子さんは、日本のあちこちへ旅に出て、それを心から楽しんでいます。<br>
+          車で回る旅ではありません。<br>
+          自分の足で歩く旅です。</p>
+          <p>今、私の目の前に浮かんでいるのは、<br>
+          リュックを背負い、カジュアルな服装で、<br>
+          自然の中へ、山のほうへと歩いていく知子さんの姿です。</p>
+          <p>数日分の荷物を持って、その土地で暮らすように過ごす。<br>
+          そしてまた、次の場所へ移っていく。<br>
+          「何日で家に戻る」とは、決めていないようです。</p>
+          <p>空を見上げて、「あっちに行きたいな」と思ったら、そちらへ向かう。<br>
+          そんな、気ままな旅を楽しんでいます。</p>
+        </article>
+
+        <article class="chapter">
+          <h3><span class="no">ii.</span>土地の人との出会いが、知子さんを育てる</h3>
+          <p>旅は、誰かと一緒に動くというより、<br>
+          訪れた土地に住む人たちと話し、その暮らしを体験することが多いようです。</p>
+          <p>その一つひとつが、知子さんの成長の糧になっています。<br>
+          経験がそのまま、知子さんの血となり、肉となっていく。<br>
+          そんな旅です。</p>
+          <p>今も、山のほうへ向かって歩いています。<br>
+          雨の中を歩く姿は、浮かんできません。<br>
+          見えてくるのは、晴れた空の下を歩く姿ばかりです。</p>
+        </article>
+
+        <article class="chapter">
+          <h3><span class="no">iii.</span>家は「帰ってこられる基地」</h3>
+          <p>家との関わりについてです。</p>
+          <p>「このまま住み続けるのかどうか」という問いよりも、<br>
+          <span class="key">安心できる基地があるからこそ、出かけていられる</span><br>
+          という形で見えてきます。</p>
+          <p>旅から戻ってくる、自分の居場所。<br>
+          自分の部屋が、そこにある。<br>
+          その安心感が、知子さんを自由に旅立たせています。</p>
+        </article>
+
+        <article class="chapter">
+          <h3><span class="no">iv.</span>リフォーム・建て直しについて</h3>
+          <p>大がかりなリフォームをしなくても、大丈夫そうです。<br>
+          部分的な修理が入ることはあっても、それで十分です。</p>
+          <p>むしろ、新しく建て替えて「今までとは違う場所」になるよりも、<br>
+          <span class="key">今の家が少しずつ進化していく</span>ほうが、<br>
+          知子さんにとって、ずっと深い安心感があるようです。</p>
+          <p>今の家と、新築の家。<br>
+          その二つの前に立つ知子さんを見たとき、<br>
+          今の家を見ているほうが、安心感がたくさん伝わってきました。</p>
+          <p>新しい家が悪いわけではありません。<br>
+          新しい家には、新しい家ならではの心地よさ・気持ちよさを感じています。</p>
+          <p>ただ、「旅に出る自分」にとってどちらが合っているかといえば、<br>
+          今の家のほうです。</p>
+          <p>どちらを選ぶかによって、味わえるものが違う。<br>
+          そう見えています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="summary">
+      <h2 class="label">鑑定のまとめ</h2>
+      <ul>
+        <li>未来の知子さんは、自分の足で日本を歩き、土地の人と触れ合いながら、気ままな旅を楽しんでいます。</li>
+        <li>家は「帰ってこられる安心の基地」。その基地があるから、自由に旅立てます。</li>
+        <li>大きなリフォームや建て替えは必須ではありません。部分的な修理で十分です。</li>
+        <li>建て替えるより、今の家を手入れしながら「進化させていく」ほうが、旅をする知子さんには安心感が大きいようです。</li>
+        <li>新築にも心地よさはあります。どちらを選ぶかで、味わえるものが変わります。</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="note">この鑑定書は、知子さんのアカシックレコードから受け取ったメッセージをお伝えするものです。未来を決めつけるものではありません。これからの選択を考えるときの、ひとつの道しるべとしてお役立てください。</p>
+      <div class="sign">
+        <div class="sign-text">
+          <span class="date">鑑定日　2026年10月11日</span>
+          <span class="role">マインドチューニングマスター</span>
+          <span class="name">美智代</span>
+        </div>
+        <div class="seal" aria-hidden="true">鑑<br>定</div>
+      </div>
+    </footer>
+
+  </div>
+</main>
