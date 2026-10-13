@@ -1,0 +1,163 @@
+<title>マヤ暦キーワード早見表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: one reference sheet. Seals in a 4-column grid where columns = the four colors (seal order cycles 赤→白→青→黄), then wavespell order, then the 13 tones. */
+:root{
+  --bg:#f7f6f9; --surface:#ffffff; --fg:#26232e; --muted:#6b6676; --line:#e2dfe8; --accent:#4b3f7a;
+  --red:#b8473c; --red-bg:#fbeceb; --white:#7c7887; --white-bg:#f1f0f3; --blue:#2f5f9e; --blue-bg:#e8eff9; --yellow:#a57a10; --yellow-bg:#fbf3dc;
+  --display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17151c; --surface:#211e28; --fg:#ece9f2; --muted:#a49fb0; --line:#353141; --accent:#b9adeb;
+  --red:#ef8f84; --red-bg:#3a2224; --white:#c9c5d3; --white-bg:#2a2733; --blue:#8db6f0; --blue-bg:#1f2a3c; --yellow:#e8c25e; --yellow-bg:#352d18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17151c; --surface:#211e28; --fg:#ece9f2; --muted:#a49fb0; --line:#353141; --accent:#b9adeb;
+  --red:#ef8f84; --red-bg:#3a2224; --white:#c9c5d3; --white-bg:#2a2733; --blue:#8db6f0; --blue-bg:#1f2a3c; --yellow:#e8c25e; --yellow-bg:#352d18; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:40px}
+header{display:grid;gap:8px}
+h1{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:0;letter-spacing:.04em;text-wrap:balance}
+.lead{margin:0;color:var(--muted);max-width:62ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+h2{font-family:var(--display);font-size:22px;margin:0 0 4px;letter-spacing:.04em}
+.sub{margin:0 0 16px;color:var(--muted);font-size:13px}
+.seals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.seal{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:6px;padding:12px 12px 14px;display:grid;gap:8px;align-content:start;min-width:0}
+.seal.r{--c:var(--red);--cb:var(--red-bg)} .seal.w{--c:var(--white);--cb:var(--white-bg)} .seal.b{--c:var(--blue);--cb:var(--blue-bg)} .seal.y{--c:var(--yellow);--cb:var(--yellow-bg)}
+.sh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.no{font-variant-numeric:tabular-nums;font-weight:700;color:var(--c);font-size:13px;min-width:1.4em}
+.sh h3{margin:0;font-family:var(--display);font-size:17px}
+.maya{color:var(--muted);font-size:11px;letter-spacing:.06em}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
+.tags li{background:var(--cb);color:var(--fg);font-size:12px;padding:1px 7px;border-radius:3px}
+.seal p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.65}
+.colhead{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:8px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.colhead div{padding-left:2px}
+.ws{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.ws li{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--c);border-radius:4px;padding:8px 10px;display:grid;grid-template-columns:auto 1fr;column-gap:8px;min-width:0}
+.ws li.r{--c:var(--red)} .ws li.w{--c:var(--white)} .ws li.b{--c:var(--blue)} .ws li.y{--c:var(--yellow)}
+.wn{grid-row:span 2;font-weight:700;color:var(--c);font-variant-numeric:tabular-nums}
+.wname{font-weight:700;font-size:13.5px}
+.kin{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0 0 14px;font-size:13px}
+.note b{color:var(--accent)}
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:13px}
+th{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.06em}
+tr:last-child td{border-bottom:0}
+.tno{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;width:2.5em}
+.tname{font-family:var(--display);font-weight:700;white-space:nowrap}
+.tkw{font-weight:700}
+.q{color:var(--muted);font-size:12.5px}
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+footer a{color:var(--muted)}
+@media (max-width:900px){.seals,.colhead{grid-template-columns:repeat(2,minmax(0,1fr))}.colhead{display:none}.ws{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.seals{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>マヤ暦キーワード早見表</h1>
+    <p class="lead">KINは「太陽の紋章」「ウェイブスペル」「銀河の音」の3つでできています。太陽の紋章は表に出る自分（顕在意識）、ウェイブスペルは内側の自分（潜在意識）、銀河の音は人生のテーマと役割を表します。</p>
+    <div class="legend">
+      <span><i style="background:var(--red)"></i>赤＝起こす・情熱（起）</span>
+      <span><i style="background:var(--white)"></i>白＝間引く・癒し（承）</span>
+      <span><i style="background:var(--blue)"></i>青＝広げる・冷静沈着（転）</span>
+      <span><i style="background:var(--yellow)"></i>黄＝まとめる・好奇心（結）</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>太陽の紋章</h2>
+    <p class="sub">表に出やすい性格・人から見える自分（顕在意識）</p>
+    <div class="colhead"><div style="color:var(--red)">赤</div><div style="color:var(--white)">白</div><div style="color:var(--blue)">青</div><div style="color:var(--yellow)">黄</div></div>
+    <div class="seals">
+<article class="seal r"><div class="sh"><span class="no">1</span><h3>赤い龍</h3><span class="maya">イーミッシュ</span></div><ul class="tags"><li>誕生</li><li>生命を育む</li><li>母性</li><li>愛</li><li>存在</li><li>命</li><li>母性愛</li></ul><p>面倒見がよく人が好き。リーダータイプ。やると決めたらやる頑張り屋。プライドの高さ・自分勝手さが出ることも</p></article>
+<article class="seal w"><div class="sh"><span class="no">2</span><h3>白い風</h3><span class="maya">イーク</span></div><ul class="tags"><li>伝える</li><li>繊細な感性</li><li>インスピレーション</li><li>スピリット（霊）</li><li>メッセンジャー</li><li>繊細な感性・感情</li></ul><p>言葉に力があり影響力がある。繊細で人の痛みがわかる。風通しのよい環境でのびのび動ける</p></article>
+<article class="seal b"><div class="sh"><span class="no">3</span><h3>青い夜</h3><span class="maya">アクバル</span></div><ul class="tags"><li>夢</li><li>豊かさ</li><li>マイペース</li><li>実現</li><li>財運</li><li>経済</li></ul><p>20紋章で一番マイペース。夢と豊かさがテーマ。自分の世界観を大事にする</p></article>
+<article class="seal y"><div class="sh"><span class="no">4</span><h3>黄色い種</h3><span class="maya">カン</span></div><ul class="tags"><li>目覚め</li><li>気づき</li><li>開花</li><li>探究</li><li>生命の種</li><li>開花の力</li><li>ひらめき</li></ul><p>20紋章で一番頭の回転が速い。探求する力。人の才能を読み取り、気づきを与える。のめり込みすぎに注意</p></article>
+<article class="seal r"><div class="sh"><span class="no">5</span><h3>赤い蛇</h3><span class="maya">チークチャン</span></div><ul class="tags"><li>情熱</li><li>本能</li><li>生命力</li><li>直観</li><li>運動</li><li>コントロールの力</li></ul><p>エネルギーが強く情熱的。努力家で狙ったものは手に入れる。嫌なことはやる気が出ない</p></article>
+<article class="seal w"><div class="sh"><span class="no">6</span><h3>白い世界の橋渡し</h3><span class="maya">キーミー</span></div><ul class="tags"><li>橋渡し</li><li>死と再生</li><li>つなぐ</li><li>橋渡しの力</li><li>カリスマ</li><li>おもてなしの精神</li><li>伝達</li></ul><p>人を惹きつける。幅広い人脈。相手が喜ぶことが好き（おもてなし）。インスピレーションを受け取る</p></article>
+<article class="seal b"><div class="sh"><span class="no">7</span><h3>青い手</h3><span class="maya">マニーク</span></div><ul class="tags"><li>癒し</li><li>理解する</li><li>手</li><li>理解し把握する力</li><li>手の魔術師</li><li>ハンドパワー</li><li>チャンス</li></ul><p>人を癒し和ませる。手先が器用。チャンスをつかむ。尽くしすぎに注意</p></article>
+<article class="seal y"><div class="sh"><span class="no">8</span><h3>黄色い星</h3><span class="maya">ラマト</span></div><ul class="tags"><li>美</li><li>調和</li><li>センス</li><li>プロ意識</li><li>芸術</li><li>愛</li><li>健康</li></ul><p>美的センスと愛と調和。センスを磨くほど宇宙のサポート。不調和な場所は方向転換。1つに集中すると良さが出る</p></article>
+<article class="seal r"><div class="sh"><span class="no">9</span><h3>赤い月</h3><span class="maya">ムールク</span></div><ul class="tags"><li>浄化</li><li>新しい流れ</li><li>使命感</li><li>清める</li><li>改革</li><li>水のチカラ</li></ul><p>使命感に生きる。一度決めたら成し遂げる。向上心がある。自分の想いをはっきりさせると強い</p></article>
+<article class="seal w"><div class="sh"><span class="no">10</span><h3>白い犬</h3><span class="maya">オク</span></div><ul class="tags"><li>誠実</li><li>家族愛</li><li>信頼</li><li>正直</li><li>ハート</li><li>誠実さ</li><li>貢献</li></ul><p>人懐こく愛されキャラ。真面目で信頼がテーマ。一度心を許した人を守る。頑固になりやすい面も</p></article>
+<article class="seal b"><div class="sh"><span class="no">11</span><h3>青い猿</h3><span class="maya">チューエン</span></div><ul class="tags"><li>遊び心</li><li>ひらめき</li><li>高い精神性</li><li>神の子</li><li>高い精神性と知性</li><li>魔術師</li><li>トリックスター</li></ul><p>楽しいことが大好き。ひらめきの天才。スピリチュアル好き。飽きっぽさが課題になりやすい</p></article>
+<article class="seal y"><div class="sh"><span class="no">12</span><h3>黄色い人</h3><span class="maya">エブ</span></div><ul class="tags"><li>自由意志</li><li>道</li><li>信念</li><li>こだわり</li><li>自由意思</li><li>理念</li><li>道理</li></ul><p>自由人で独特の雰囲気。強い信念とこだわり。論理的で理解力が高い。道を極める</p></article>
+<article class="seal r"><div class="sh"><span class="no">13</span><h3>赤い空歩く人</h3><span class="maya">ベン</span></div><ul class="tags"><li>人の成長を助ける</li><li>奉仕</li><li>探求</li><li>慈愛</li><li>人々の成長を手助けする</li><li>天と地の柱の役割</li></ul><p>慈愛にあふれ社会貢献できる。人への接し方が上手。未知への挑戦意欲。ストレスを抱え込みやすい面も</p></article>
+<article class="seal w"><div class="sh"><span class="no">14</span><h3>白い魔法使い</h3><span class="maya">イーシュ</span></div><ul class="tags"><li>赦し</li><li>受容</li><li>魅了</li><li>魔法の力</li><li>永遠</li><li>シャーマン</li><li>受容性</li></ul><p>人を魅了する。礼儀正しくきちんとしている。純粋・真面目・直球勝負。スピリチュアル性が高い</p></article>
+<article class="seal b"><div class="sh"><span class="no">15</span><h3>青い鷲</h3><span class="maya">メン</span></div><ul class="tags"><li>ビジョン</li><li>先見性</li><li>俯瞰</li><li>クリエイティビティ</li><li>見通す力</li><li>クールな知性</li></ul><p>頭が切れて創造性が豊か。交渉力が抜群。俯瞰できる冷静さ。ネガティブに傾きやすい面も</p></article>
+<article class="seal y"><div class="sh"><span class="no">16</span><h3>黄色い戦士</h3><span class="maya">キーブ</span></div><ul class="tags"><li>挑戦</li><li>自問自答</li><li>突破</li><li>戦いの力</li><li>知性</li></ul><p>好奇心旺盛で困難を突破する。思慮深い。ストイックに自分と闘う。挑戦が魂の喜び</p></article>
+<article class="seal r"><div class="sh"><span class="no">17</span><h3>赤い地球</h3><span class="maya">カバン</span></div><ul class="tags"><li>絆</li><li>シンクロ</li><li>舵取り</li><li>言霊</li><li>音楽</li><li>シンクロニシティ</li><li>地球</li></ul><p>ロマンチストで心のつながりを求める。自分の中にリズムがある。人の心を揺り動かす。言葉に重み。寂しさに弱い</p></article>
+<article class="seal w"><div class="sh"><span class="no">18</span><h3>白い鏡</h3><span class="maya">エツナブ</span></div><ul class="tags"><li>秩序</li><li>映し出す</li><li>永遠</li><li>自立</li><li>映し出す鏡</li><li>美</li><li>調和</li></ul><p>礼儀正しく正義感が強い。言行一致を好む。邪念がない。自分で作った「枠」を外すのが課題</p></article>
+<article class="seal b"><div class="sh"><span class="no">19</span><h3>青い嵐</h3><span class="maya">カウアク</span></div><ul class="tags"><li>変容</li><li>巻き込み力</li><li>家族の団らん</li><li>嵐の力</li><li>火</li><li>かまどの神</li><li>味覚</li></ul><p>嵐のようなエネルギーで常に前進。バイタリティがあり動員力がすごい。身近な理解者がいると安定する</p></article>
+<article class="seal y"><div class="sh"><span class="no">20</span><h3>黄色い太陽</h3><span class="maya">アハウ</span></div><ul class="tags"><li>太陽の力</li><li>円満</li><li>円熟</li><li>感謝</li><li>生命</li><li>財運</li></ul><p>太陽のような存在感。前向きで器が大きい。責任感が強い。恵まれていて感謝の気持ちが大きい</p></article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>ウェイブスペル</h2>
+    <p class="sub">自分でも気づきにくい本質・内側の自分（潜在意識）</p>
+    <p class="note"><b>読み方：</b>ウェイブスペルの意味は、同じ名前の太陽の紋章と同じです。上のキーワードを「内側にある力」として読みます。260日を13日ずつ20に分けた順番で、自分のKINがどの範囲に入るかでウェイブスペルが決まります。</p>
+    <ol class="ws">
+<li class="r"><span class="wn">1</span><span class="wname">赤い龍</span><span class="kin">KIN 1–13</span></li>
+<li class="w"><span class="wn">2</span><span class="wname">白い魔法使い</span><span class="kin">KIN 14–26</span></li>
+<li class="b"><span class="wn">3</span><span class="wname">青い手</span><span class="kin">KIN 27–39</span></li>
+<li class="y"><span class="wn">4</span><span class="wname">黄色い太陽</span><span class="kin">KIN 40–52</span></li>
+<li class="r"><span class="wn">5</span><span class="wname">赤い空歩く人</span><span class="kin">KIN 53–65</span></li>
+<li class="w"><span class="wn">6</span><span class="wname">白い世界の橋渡し</span><span class="kin">KIN 66–78</span></li>
+<li class="b"><span class="wn">7</span><span class="wname">青い嵐</span><span class="kin">KIN 79–91</span></li>
+<li class="y"><span class="wn">8</span><span class="wname">黄色い人</span><span class="kin">KIN 92–104</span></li>
+<li class="r"><span class="wn">9</span><span class="wname">赤い蛇</span><span class="kin">KIN 105–117</span></li>
+<li class="w"><span class="wn">10</span><span class="wname">白い鏡</span><span class="kin">KIN 118–130</span></li>
+<li class="b"><span class="wn">11</span><span class="wname">青い猿</span><span class="kin">KIN 131–143</span></li>
+<li class="y"><span class="wn">12</span><span class="wname">黄色い種</span><span class="kin">KIN 144–156</span></li>
+<li class="r"><span class="wn">13</span><span class="wname">赤い地球</span><span class="kin">KIN 157–169</span></li>
+<li class="w"><span class="wn">14</span><span class="wname">白い犬</span><span class="kin">KIN 170–182</span></li>
+<li class="b"><span class="wn">15</span><span class="wname">青い夜</span><span class="kin">KIN 183–195</span></li>
+<li class="y"><span class="wn">16</span><span class="wname">黄色い戦士</span><span class="kin">KIN 196–208</span></li>
+<li class="r"><span class="wn">17</span><span class="wname">赤い月</span><span class="kin">KIN 209–221</span></li>
+<li class="w"><span class="wn">18</span><span class="wname">白い風</span><span class="kin">KIN 222–234</span></li>
+<li class="b"><span class="wn">19</span><span class="wname">青い鷲</span><span class="kin">KIN 235–247</span></li>
+<li class="y"><span class="wn">20</span><span class="wname">黄色い星</span><span class="kin">KIN 248–260</span></li>
+
+    </ol>
+  </section>
+
+  <section>
+    <h2>銀河の音</h2>
+    <p class="sub">人生のテーマ・生き方・役割（1〜13）</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>音</th><th>名称</th><th>キーワード</th><th>特徴</th><th>問いかけ</th></tr></thead>
+        <tbody>
+<tr><td class="tno">1</td><td class="tname">磁気</td><td class="tkw">目的／統一／意思決定／始まり</td><td>自分軸、引き寄せ抜群</td><td class="q">目的は何か？</td></tr>
+<tr><td class="tno">2</td><td class="tname">月</td><td class="tkw">選択／判断／挑戦／二極</td><td>二者択一、判断力、直感、分類する力</td><td class="q">挑戦は何か？</td></tr>
+<tr><td class="tno">3</td><td class="tname">電気</td><td class="tkw">奉仕／つなぐ／協力</td><td>人間関係で生きる、つなぐ</td><td class="q">どうすれば最善の奉仕ができるか？</td></tr>
+<tr><td class="tno">4</td><td class="tname">自己存在</td><td class="tkw">形を決める／定義／探究</td><td>探求心、分析、冷静、調える</td><td class="q">奉仕の形は何か？</td></tr>
+<tr><td class="tno">5</td><td class="tname">倍音</td><td class="tkw">中心／底力／力を与える</td><td>自分が中心、底力、オンオフはっきり</td><td class="q">どうすれば最善の力を与えられるか？</td></tr>
+<tr><td class="tno">6</td><td class="tname">律動</td><td class="tkw">バランス／平等／組織</td><td>マイペース、調和</td><td class="q">どうすれば平等にできるか？</td></tr>
+<tr><td class="tno">7</td><td class="tname">共振</td><td class="tkw">調律／神秘／内面探求</td><td>神秘の力、鋭い五感と六感、スピリチュアル</td><td class="q">どうすれば奉仕を調律できるか？</td></tr>
+<tr><td class="tno">8</td><td class="tname">銀河</td><td class="tkw">調和／ハーモニー／調整</td><td>調和的共振、調和する力、お世話好き、感受性が強い</td><td class="q">信じることを実践しているか？</td></tr>
+<tr><td class="tno">9</td><td class="tname">太陽</td><td class="tkw">情熱／ワクワク／意図</td><td>躍動感、わくわくドキドキ、傾聴する</td><td class="q">どうすれば目的を達成できるか？</td></tr>
+<tr><td class="tno">10</td><td class="tname">惑星</td><td class="tkw">実現／プロデュース／形にする</td><td>仕上げる、プロデュース、裏方に徹する、調整役、形になる</td><td class="q">どうすれば完成させられるか？</td></tr>
+<tr><td class="tno">11</td><td class="tname">スペクトル</td><td class="tkw">解放／改革／手放す</td><td>エネルギーの解放、初志貫徹、強烈なエネルギー、オリジナリティ、革命者</td><td class="q">どうすれば解き放てるか？</td></tr>
+<tr><td class="tno">12</td><td class="tname">水晶</td><td class="tkw">共有／協力／安定</td><td>安定、共有する、聞き上手、センス</td><td class="q">どうすれば献身できるか？</td></tr>
+<tr><td class="tno">13</td><td class="tname">宇宙</td><td class="tkw">超越／完成／持ちこたえる</td><td>超越する、忍耐強さ、没頭する、大器晩成</td><td class="q">どうすれば存在を広げられるか？</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div>キーワードは流派・著者によって表現が異なります。この表は複数の解説をもとにまとめたものです。</div>
+    <div>参考：<a href="https://misano-chiebukuro.com/20_monsho/">みさのちえぶくろ</a>／<a href="https://ameblo.jp/megmaya5/entry-12657513117.html">Megumi（アメブロ）</a>／<a href="https://note.com/noramikozou/n/n3cecd5044bd6">nora（note）</a>／<a href="https://maya-reki.riankitchen.com/95/">riankitchen</a>／<a href="https://mayan-astrology.org/contents/category/lunatone/">mayan-astrology.org</a>／<a href="https://note.com/abc_yzx/n/na9dc6e0a9b5b">Maya Astro Alchemy</a></div>
+  </footer>
+</div>
