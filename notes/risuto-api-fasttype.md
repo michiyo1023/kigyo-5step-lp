@@ -12,6 +12,7 @@
 | タイプを作る | POST `/api/create_fast_type_result`（fast_type_id, name, header_message=見出し, message=回答メール文, i_order） | 動いた |
 | タイプを直す | POST `/api/update_fast_type_result`（fast_type_result_id ＋直す項目） | 動いた |
 | 質問を作る | POST `/api/create_fast_type_question`（fast_type_id, question, answers） | 動いた |
+| 質問を直す | POST `/api/update_fast_type_question`（fast_type_question_id, question, answers をまるごと） | 動いた。点数もそのまま残る |
 | 画像を上げる | POST `/api/upload_image`（multipart の file） | 動いた。返ってきた url を header_image_url に入れる |
 
 | ステップメール一覧 | GET `/api/step_mails` | 動いた（id・title・subscribers_count だけ） |
@@ -30,3 +31,13 @@
   - 配信グループは、作ったときに自動で 127648「クチコミで人気教室運営・セラピストになれるメール講座」が入っていた
 - ステップメール 371128「口コミタイプ診断フォロー」：入れ物だけ。中身は空。公開・受付中になっている。ファストタイプにはまだつないでいない
 - 216番「あ」、217番「２」は、美智代さんが10/16に試しに作った枠。触っていない
+
+## タイプ別の画像（2026-10-17）
+- タイプの設定（fast_type_result）には、画像の欄が窓口側にない（image_url などを送ると「更新する項目がない」）
+- 画像はリザストに上げてある。管理画面から各タイプに入れる
+  - 寄り添い：https://www.reservestock.jp/upload_images/16985/16985_2d9d496c651576df9d0785497058b290.jpg
+  - 道しるべ：https://www.reservestock.jp/upload_images/16985/16985_8a028b1aa6c5d0e6bc9515e5f597759f.jpg
+  - 伴走：https://www.reservestock.jp/upload_images/16985/16985_03743795d662f3b4bf9c7a0e663b0bc5.jpg
+  - ひらめき：https://www.reservestock.jp/upload_images/16985/16985_34144837728866b8aaa2c573b6394980.jpg
+  - 橋わたし：https://www.reservestock.jp/upload_images/16985/16985_e7aed1b51e5b7404c6bb4a6275208418.jpg
+- 結果メールは `fasttype-result-mail-v2.md` を221番に入れた（各タイプの本文＋全タイプ共通＋署名）
