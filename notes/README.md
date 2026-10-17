@@ -16,6 +16,12 @@
 7. `banner-codex-prompt.md`：バナーのCodex用指示文 v1（白すぎたため不採用）
 8. `banner-codex-prompt-v2.md`：バナーのCodex用指示文 v2（人気診断バナーを参考に、文字の大小を入れかえ）
 
+9. `fasttype-lp-v1.html`：診断のLP（リザストの「告知文」欄に入れたHTML）
+10. `risuto-api-fasttype.md`：リザストAPIでファストタイプを入れる方法と、入れた記録
+
+## リザスト
+- 221番に入れた（公開前）：https://www.reservestock.jp/page/fast_type/221
+
 ## バナー画像（`../banners/`）
 - `kuchikomi-type-banner-v2-a.png`：案A 生成りの和紙と波紋
 - `kuchikomi-type-banner-v2-b.png`：案B ネイビーと光の粒（おすすめ）
@@ -24,6 +30,7 @@
 ## 決めたこと
 - 診断の呼び名：リザストの名称は長い形のまま。バナーとステップメールでは短い呼び名「口コミタイプ診断」を使い、1通目で長い名称と一度だけつなげる
 
+- バナーは案B（ネイビーと光の粒）
+
 ## 未決定
-- バナーは案A・案Bのどちらにするか
 - ステップメールの【日程】【締切】【申込URL】、4通目の実体験
