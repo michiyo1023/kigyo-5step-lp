@@ -166,7 +166,8 @@ https://www.reservestock.jp/page/consecutive_events/48264
 ### 【ピン1】記事のピン｜投稿目安 10/21（水）※note公開後
 
 **画像**
-- note の見出し画像を、縦長 1000×1500 にリサイズして使う（タイトルの文字が切れないように）
+- `sns-posts/images/pin_erabare-nou.png`（Codexで作成・1000×1500）
+- note の見出し画像：`sns-posts/images/note-cover_codex.png`
 - ChatGPTに頼むときの文：
 
 > さっきの見出し画像を、Pinterestサイズにリサイズしてください。
@@ -185,7 +186,7 @@ https://www.reservestock.jp/page/consecutive_events/48264
 **説明文**
 資格も取って、発信も続けているのに申し込みが来ない。その原因は、知識不足ではなく「脳のブレーキ」と「届け方の順番」にありました。資格があるのに集客できない起業女性に多い3つの理由と、必死に発信しなくても口コミで選ばれるための3ステップを、元教員の起業コンサルタントが解説します。今日からできる小さなワークつき。
 
-**リンク先**：【noteのURL】
+**リンク先**：https://note.com/michiyo_1023/n/nc113565d0c37
 
 ---
 
@@ -301,4 +302,4 @@ noteに、資格があるのに集客できない3つの理由と、口コミで
 
 11月のセミナーのご案内も、記事の最後にあります。
 
-【noteのURL】
+https://note.com/michiyo_1023/n/nc113565d0c37
