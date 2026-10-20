@@ -195,7 +195,7 @@ https://www.reservestock.jp/page/consecutive_events/48264
 ### 【インスタ1】カルーセル10枚＋キャプション｜投稿目安 10/21（水）
 
 **画像（1080×1350・10枚）の文字**
-※デザイン：`sns-posts/images/insta/slide01_cover.png` の雰囲気（淡い水彩・金・明朝体）。人物・吹き出しなし。
+※画像（Codexで作成・1080×1350・完成）：`sns-posts/images/insta/slide01_cover.png`〜`slide10.png`（1枚ごとに色とイラストを変えている。人物・吹き出しなし）
 
 1枚目（表紙・済）
 学んで、動いているのに
