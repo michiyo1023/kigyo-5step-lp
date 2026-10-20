@@ -10,52 +10,85 @@
   html,body{width:1280px;height:670px;overflow:hidden;}
   body{background:linear-gradient(135deg,var(--ink) 0%,var(--ink2) 100%);font-family:"Noto Sans JP",sans-serif;color:var(--cream);position:relative;}
   .frame{position:absolute;inset:28px;border:1px solid rgba(217,180,106,.45);border-radius:6px;}
-  .text{position:absolute;left:110px;top:118px;width:700px;}
-  .kicker{display:inline-block;font-size:22px;letter-spacing:.18em;color:var(--gold-l);border:1px solid var(--gold-l);border-radius:999px;padding:6px 24px;margin-bottom:30px;font-weight:500;}
-  h1{font-family:"Shippori Mincho",serif;font-weight:800;line-height:1.38;}
-  h1 .l1{display:block;font-size:52px;}
-  h1 .l2{display:block;font-size:82px;color:var(--gold-l);letter-spacing:.02em;}
-  .sub{margin-top:26px;font-family:"Shippori Mincho",serif;font-weight:700;font-size:34px;color:var(--cream);}
+  .kicker{position:absolute;left:110px;top:78px;font-size:21px;letter-spacing:.18em;color:var(--gold-l);border:1px solid var(--gold-l);border-radius:999px;padding:6px 24px;font-weight:500;}
+  .text{position:absolute;left:110px;top:186px;width:720px;}
+  h1{font-family:"Shippori Mincho",serif;font-weight:800;line-height:1.36;}
+  h1 .l1{display:block;font-size:54px;}
+  h1 .l2{display:block;font-size:92px;color:var(--gold-l);letter-spacing:.02em;}
+  .sub{margin-top:22px;font-family:"Shippori Mincho",serif;font-weight:700;font-size:36px;}
   .sub::before{content:"";display:inline-block;width:46px;height:2px;background:var(--gold);vertical-align:middle;margin-right:18px;}
   .name{position:absolute;left:110px;bottom:62px;font-size:20px;color:#b9bdc9;letter-spacing:.08em;}
-  .art{position:absolute;right:96px;top:96px;}
+  .art{position:absolute;right:66px;top:52px;}
+  .msg{font-family:"Noto Sans JP",sans-serif;font-weight:700;}
 </style>
 </head>
 <body>
   <div class="frame"></div>
+  <div class="kicker">起業女性のための口コミ集客</div>
   <div class="text">
-    <div class="kicker">起業女性のための口コミ集客</div>
     <h1><span class="l1">資格があるのに集客できない</span><span class="l2">3つの理由</span></h1>
     <p class="sub">口コミで選ばれる順番</p>
   </div>
   <div class="name">マインドチューニングマスター　美智代</div>
 
-  <svg class="art" width="380" height="470" viewBox="-20 0 380 470" overflow="visible" aria-hidden="true">
-    <circle cx="170" cy="240" r="165" fill="rgba(217,180,106,.10)"/>
-    <!-- phone -->
-    <rect x="70" y="60" width="200" height="370" rx="30" fill="#f8f4ec"/>
-    <rect x="84" y="92" width="172" height="306" rx="10" fill="#efe7d8"/>
-    <rect x="140" y="72" width="60" height="8" rx="4" fill="#ddd3bd"/>
-    <!-- incoming message -->
-    <rect x="98" y="128" width="144" height="70" rx="14" fill="#fffdf9" stroke="#d9b46a" stroke-width="2"/>
-    <circle cx="120" cy="150" r="10" fill="#b6883f"/>
-    <rect x="138" y="144" width="88" height="10" rx="5" fill="#cfc4ad"/>
-    <rect x="112" y="170" width="116" height="10" rx="5" fill="#ddd3bd"/>
-    <!-- second message -->
-    <rect x="98" y="214" width="144" height="58" rx="14" fill="#fffdf9"/>
-    <rect x="112" y="232" width="100" height="10" rx="5" fill="#ddd3bd"/>
-    <rect x="112" y="250" width="70" height="10" rx="5" fill="#ddd3bd"/>
-    <!-- heart -->
-    <path d="M170 350 c-22 -16 -36 -28 -36 -44 a18 18 0 0 1 36 -6 a18 18 0 0 1 36 6 c0 16 -14 28 -36 44z" fill="#b6883f"/>
+  <svg class="art" width="385" height="550" viewBox="0 0 420 600" aria-hidden="true">
+    <circle cx="215" cy="330" r="190" fill="rgba(217,180,106,.10)"/>
+
     <!-- speech bubble -->
-    <g transform="translate(150,8)">
-      <rect x="0" y="0" width="186" height="64" rx="32" fill="#b6883f"/>
-      <path d="M40 60 l-8 24 l28 -22z" fill="#b6883f"/>
-      <text x="93" y="42" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="26" fill="#1f2430">この人はね…</text>
+    <g transform="translate(206,58)">
+      <rect x="0" y="0" width="190" height="62" rx="31" fill="#b6883f"/>
+      <path d="M48 58 l-14 26 l34 -24z" fill="#b6883f"/>
+      <text x="95" y="41" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="26" fill="#1f2430">この人はね…</text>
     </g>
+
+    <!-- woman -->
+    <!-- back hair -->
+    <path d="M110 205 C 100 140, 150 105, 200 108 C 255 110, 292 150, 284 215 C 280 262, 292 300, 300 318 L 112 318 C 118 290, 116 250, 110 205 Z" fill="#3a2e2a"/>
+    <!-- neck -->
+    <rect x="182" y="262" width="34" height="40" rx="10" fill="#e8c4a8"/>
+    <!-- body / top -->
+    <path d="M92 560 C 92 400, 120 318, 200 300 C 280 318, 312 400, 312 560 Z" fill="#f8f4ec"/>
+    <path d="M168 300 L 200 336 L 232 300 Z" fill="#e8c4a8"/>
+    <path d="M150 306 C 170 330, 230 330, 250 306" fill="none" stroke="#d9b46a" stroke-width="3"/>
+    <!-- face -->
+    <ellipse cx="199" cy="208" rx="56" ry="66" fill="#f1d3bb"/>
+    <!-- bangs -->
+    <path d="M140 196 C 140 140, 190 120, 230 132 C 252 140, 262 168, 258 196 C 240 170, 210 160, 186 170 C 170 178, 156 190, 140 196 Z" fill="#3a2e2a"/>
+    <!-- side hair -->
+    <path d="M142 190 C 136 230, 140 262, 150 288 L 136 290 C 124 256, 126 220, 142 190 Z" fill="#3a2e2a"/>
+    <path d="M256 190 C 262 230, 258 262, 250 288 L 264 290 C 274 256, 272 220, 256 190 Z" fill="#3a2e2a"/>
+    <!-- relieved closed eyes -->
+    <path d="M168 214 q 10 8 20 0" fill="none" stroke="#3a2e2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M212 214 q 10 8 20 0" fill="none" stroke="#3a2e2a" stroke-width="3" stroke-linecap="round"/>
+    <!-- cheeks -->
+    <ellipse cx="170" cy="236" rx="11" ry="6" fill="#e9a99a" opacity=".55"/>
+    <ellipse cx="230" cy="236" rx="11" ry="6" fill="#e9a99a" opacity=".55"/>
+    <!-- smile -->
+    <path d="M188 246 q 12 10 24 0" fill="none" stroke="#a8433a" stroke-width="3" stroke-linecap="round"/>
+    <!-- earring -->
+    <circle cx="144" cy="232" r="5" fill="#d9b46a"/>
+    <circle cx="254" cy="232" r="5" fill="#d9b46a"/>
+
+    <!-- phone + hand -->
+    <g transform="rotate(-8 300 430)">
+      <rect x="228" y="330" width="150" height="250" rx="22" fill="#1f2430" stroke="#d9b46a" stroke-width="3"/>
+      <rect x="240" y="352" width="126" height="206" rx="10" fill="#fffdf9"/>
+      <!-- message -->
+      <rect x="248" y="372" width="110" height="78" rx="12" fill="#f8f4ec" stroke="#d9b46a" stroke-width="2"/>
+      <circle cx="262" cy="388" r="7" fill="#b6883f"/>
+      <text x="275" y="393" font-family="Noto Sans JP, sans-serif" font-weight="700" font-size="11" fill="#8f6a2e">新着メッセージ</text>
+      <text class="msg" x="256" y="418" font-size="14.5" fill="#1f2430">◯◯さんから</text>
+      <text class="msg" x="256" y="439" font-size="14.5" fill="#1f2430">聞きました</text>
+      <rect x="248" y="462" width="96" height="10" rx="5" fill="#e6dcc8"/>
+      <rect x="248" y="480" width="70" height="10" rx="5" fill="#e6dcc8"/>
+      <path d="M303 534 c-12 -9 -20 -16 -20 -25 a10 10 0 0 1 20 -3 a10 10 0 0 1 20 3 c0 9 -8 16 -20 25z" fill="#b6883f"/>
+    </g>
+    <!-- hand -->
+    <path d="M212 520 C 230 492, 262 486, 278 500 C 286 510, 276 530, 256 538 C 240 546, 222 546, 212 520 Z" fill="#f1d3bb"/>
+
     <!-- sparkles -->
-    <path d="M300 300 l6 16 l16 6 l-16 6 l-6 16 l-6 -16 l-16 -6 l16 -6z" fill="#d9b46a"/>
-    <path d="M40 120 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z" fill="#d9b46a" opacity=".8"/>
+    <path d="M392 300 l6 16 l16 6 l-16 6 l-6 16 l-6 -16 l-16 -6 l16 -6z" fill="#d9b46a"/>
+    <path d="M60 150 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z" fill="#d9b46a" opacity=".8"/>
   </svg>
 </body>
 </html>
