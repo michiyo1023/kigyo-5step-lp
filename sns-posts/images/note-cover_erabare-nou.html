@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>note cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700;800&family=Noto+Sans+JP:wght@500;700&display=block" rel="stylesheet">
+<style>
+  :root{--ink:#1f2430;--ink2:#2a3142;--cream:#f8f4ec;--gold:#b6883f;--gold-l:#d9b46a;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1280px;height:670px;overflow:hidden;}
+  body{background:linear-gradient(135deg,var(--ink) 0%,var(--ink2) 100%);font-family:"Noto Sans JP",sans-serif;color:var(--cream);position:relative;}
+  .frame{position:absolute;inset:28px;border:1px solid rgba(217,180,106,.45);border-radius:6px;}
+  .text{position:absolute;left:110px;top:118px;width:700px;}
+  .kicker{display:inline-block;font-size:22px;letter-spacing:.18em;color:var(--gold-l);border:1px solid var(--gold-l);border-radius:999px;padding:6px 24px;margin-bottom:30px;font-weight:500;}
+  h1{font-family:"Shippori Mincho",serif;font-weight:800;line-height:1.38;}
+  h1 .l1{display:block;font-size:52px;}
+  h1 .l2{display:block;font-size:82px;color:var(--gold-l);letter-spacing:.02em;}
+  .sub{margin-top:26px;font-family:"Shippori Mincho",serif;font-weight:700;font-size:34px;color:var(--cream);}
+  .sub::before{content:"";display:inline-block;width:46px;height:2px;background:var(--gold);vertical-align:middle;margin-right:18px;}
+  .name{position:absolute;left:110px;bottom:62px;font-size:20px;color:#b9bdc9;letter-spacing:.08em;}
+  .art{position:absolute;right:96px;top:96px;}
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="text">
+    <div class="kicker">起業女性のための口コミ集客</div>
+    <h1><span class="l1">資格があるのに集客できない</span><span class="l2">3つの理由</span></h1>
+    <p class="sub">口コミで選ばれる順番</p>
+  </div>
+  <div class="name">マインドチューニングマスター　美智代</div>
+
+  <svg class="art" width="380" height="470" viewBox="-20 0 380 470" overflow="visible" aria-hidden="true">
+    <circle cx="170" cy="240" r="165" fill="rgba(217,180,106,.10)"/>
+    <!-- phone -->
+    <rect x="70" y="60" width="200" height="370" rx="30" fill="#f8f4ec"/>
+    <rect x="84" y="92" width="172" height="306" rx="10" fill="#efe7d8"/>
+    <rect x="140" y="72" width="60" height="8" rx="4" fill="#ddd3bd"/>
+    <!-- incoming message -->
+    <rect x="98" y="128" width="144" height="70" rx="14" fill="#fffdf9" stroke="#d9b46a" stroke-width="2"/>
+    <circle cx="120" cy="150" r="10" fill="#b6883f"/>
+    <rect x="138" y="144" width="88" height="10" rx="5" fill="#cfc4ad"/>
+    <rect x="112" y="170" width="116" height="10" rx="5" fill="#ddd3bd"/>
+    <!-- second message -->
+    <rect x="98" y="214" width="144" height="58" rx="14" fill="#fffdf9"/>
+    <rect x="112" y="232" width="100" height="10" rx="5" fill="#ddd3bd"/>
+    <rect x="112" y="250" width="70" height="10" rx="5" fill="#ddd3bd"/>
+    <!-- heart -->
+    <path d="M170 350 c-22 -16 -36 -28 -36 -44 a18 18 0 0 1 36 -6 a18 18 0 0 1 36 6 c0 16 -14 28 -36 44z" fill="#b6883f"/>
+    <!-- speech bubble -->
+    <g transform="translate(150,8)">
+      <rect x="0" y="0" width="186" height="64" rx="32" fill="#b6883f"/>
+      <path d="M40 60 l-8 24 l28 -22z" fill="#b6883f"/>
+      <text x="93" y="42" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="26" fill="#1f2430">この人はね…</text>
+    </g>
+    <!-- sparkles -->
+    <path d="M300 300 l6 16 l16 6 l-16 6 l-6 16 l-6 -16 l-16 -6 l16 -6z" fill="#d9b46a"/>
+    <path d="M40 120 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z" fill="#d9b46a" opacity=".8"/>
+  </svg>
+</body>
+</html>
