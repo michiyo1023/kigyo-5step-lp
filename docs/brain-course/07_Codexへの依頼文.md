@@ -8,7 +8,7 @@
 ## 1. 先に読むファイル（この順番）
 1. `docs/brain-course/06_Codexスライド指示書.md`（スライドの全指示。最重要）
 2. `docs/brain-course/05_最終設計_全6回.md`（各回のゴールと流れ）
-3. `docs/brain-course/CLAUDE.md` ではなく、リポジトリ直下の `CLAUDE.md`（用語ルール）
+3. リポジトリ直下の `CLAUDE.md`（用語ルール）
 
 `00`〜`04` の資料メモは、読まなくて構いません（背景資料です）。
 
